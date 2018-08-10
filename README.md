@@ -1,5 +1,6 @@
 # ESPHue
 Controlling the Philips Hue lighting system using just an ESP8266 Wifi controller.
+
 Build on top of the library by Tom van Rooij (https://github.com/tomvanrooij/ESPHue/)
 
 Lots of thanks to him for making the base of it!
@@ -38,8 +39,7 @@ Upload the sketch to your ESP8266 and it should work.
 
 Until now, it is only to do PUT commands by this library. GET commands are not received yet from the Hue bridge. This means that the get commands in this library will refer to the variable states used by this library.
 
-The commands supported by this library are:
-
+# Available functions
 void setDebug( bool _debug );
 
 void setupIP( char* _bridge_ip );

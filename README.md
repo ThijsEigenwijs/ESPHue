@@ -1,7 +1,22 @@
 # ESPHue
 Controlling the Philips Hue lighting system using just an ESP8266 Wifi controller.
+Build on top of the library by Tom van Rooij (https://github.com/tomvanrooij/ESPHue/)
 
-To start:
+Lots of thanks to him for making the base of it!
+
+# To Do List for it
+ - Getting the name of the lights
+ - Getting the settings of the groups
+ - A function to recieve a API key (and store it somewhere)
+ - More examples for the newer functions
+ - More documentation for all the functions
+ - ESP32 compatable (or an ESP32 compatable version)
+
+# Dependencies
+
+	ArduinoJSON: https://github.com/bblanchon/ArduinoJson
+ 
+# To Start
 
 - Get your Philips Hue bridge IP address. https://www.meethue.com/api/nupnp can help you with this. 
 You need this IP address to create a new username for the ESP. 
@@ -88,3 +103,21 @@ void CBSet( uint8_t _light_id, uint16_t _ct, uint8_t _bri );
 bool set( uint8_t _light_id );
 
 bool set( uint8_t _light_id, String _command );
+
+String getLightInfo(int _light_id);
+
+bool getLightState(int _light_id);
+
+int getLightBri(int _light_id);
+
+int getLightSat(int _light_id);
+
+int getLightHue(int _light_id);
+
+int getLightCt(int _light_id);
+
+String getLightName(int _light_id);
+
+int getLightX(int _light_id);
+
+int getLightY(int _light_id);
